@@ -53,7 +53,7 @@ func getVPC(name string) *resource {
 	ptrVPC.addContent(fmt.Sprintf(`labelloc="t" labeljust="l" color="purple" label=<
 			<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="0">
 				<TR>
-					<TD><IMG SRC="icons/Architecture-Group-Icons_07312026/Virtual-private-cloud-VPC_32.svg"/></TD>
+					<TD><IMG SRC="icons/Architecture-Group-Icons/Virtual-private-cloud-VPC_32.svg"/></TD>
                <TD><B>%s</B></TD>
             </TR>
          </TABLE>
@@ -67,11 +67,25 @@ func getEC2(instanceID string) *resource {
 	return getPrefilledResource(fmt.Sprintf(`%s [shape=none, fontcolor="white", label=<
        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
           <TR>
-			 	<TD><IMG SRC="icons/Architecture-Service-Icons_07312026/Arch_Compute/32/Arch_Amazon-EC2_32.svg"/></TD>
+				 <TD><IMG SRC="icons/Architecture-Service-Icons/Arch_Compute/32/Arch_Amazon-EC2_32.svg"/></TD>
 			 </TR>
           <TR>
 			 	<TD>%s</TD>
 			 </TR>
        </TABLE>
         >]`, RemoveDashes(instanceID), instanceID))
+}
+
+func getPrivateSubnet(name string) *resource {
+	ptrSubnet := getSubgraph(name)
+	ptrSubnet.addContent(fmt.Sprintf(`labelloc="t" labeljust="l" color=" #40E0D0" label=<
+			<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="0">
+				<TR>
+					<TD><IMG SRC="icons/Architecture-Group-Icons/Private-subnet_32.svg"/></TD>
+               <TD><B>%s</B></TD>
+            </TR>
+         </TABLE>
+      >`, name))
+
+	return ptrSubnet
 }

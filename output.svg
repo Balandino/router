@@ -5,34 +5,40 @@
  -->
 <!-- Title: gogv Pages: 1 -->
 <svg width="100%" height="100%"
- viewBox="0.00 0.00 218.45 136.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 132)">
+ viewBox="0.00 0.00 234.45 190.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 186)">
 <title>gogv</title>
-<polygon fill="black" stroke="none" points="-4,4 -4,-132 214.45,-132 214.45,4 -4,4"/>
+<polygon fill="black" stroke="none" points="-4,4 -4,-186 230.45,-186 230.45,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_c0000</title>
-<polygon fill="black" stroke="purple" points="8,-8 8,-120 202.45,-120 202.45,-8 8,-8"/>
-<image xlink:href="icons/Architecture-Group-Icons_07312026/Virtual-private-cloud-VPC_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="20" y="-112"/>
-<text text-anchor="start" x="46" y="-97.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">c0000</text>
+<polygon fill="black" stroke="purple" points="8,-8 8,-174 218.45,-174 218.45,-8 8,-8"/>
+<image xlink:href="icons/Architecture-Group-Icons/Virtual-private-cloud-VPC_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="20" y="-166"/>
+<text text-anchor="start" x="46" y="-151.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">c0000</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_sub0c123d321341</title>
+<polygon fill="black" stroke="#40e0d0" points="16,-16 16,-128 210.45,-128 210.45,-16 16,-16"/>
+<image xlink:href="icons/Architecture-Group-Icons/Private-subnet_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="28" y="-120"/>
+<text text-anchor="start" x="54" y="-105.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">sub&#45;0c123d321341</text>
 </g>
 <!-- i123 -->
 <g id="node1" class="node">
 <title>i123</title>
-<image xlink:href="icons/Architecture-Service-Icons_07312026/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="29.6582" y="-66.2"/>
-<text text-anchor="start" x="29.66" y="-27.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;123</text>
+<image xlink:href="icons/Architecture-Service-Icons/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="37.6582" y="-74.2"/>
+<text text-anchor="start" x="37.66" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;123</text>
 </g>
 <!-- i789 -->
 <g id="node2" class="node">
 <title>i789</title>
-<image xlink:href="icons/Architecture-Service-Icons_07312026/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="154.111" y="-66.2"/>
-<text text-anchor="start" x="154.11" y="-27.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;789</text>
+<image xlink:href="icons/Architecture-Service-Icons/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="162.111" y="-74.2"/>
+<text text-anchor="start" x="162.11" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;789</text>
 </g>
 <!-- i123&#45;&gt;i789 -->
 <g id="edge1" class="edge">
 <title>i123&#45;&gt;i789</title>
-<path fill="none" stroke="white" d="M69.97,-45C87.18,-45 110.02,-45 129.17,-45"/>
-<polygon fill="white" stroke="white" points="129.01,-48.5 139.01,-45 129.01,-41.5 129.01,-48.5"/>
-<text text-anchor="middle" x="105.23" y="-48" font-family="Helvetica,sans-Serif" font-size="10.00" fill="white">My Link</text>
+<path fill="none" stroke="white" d="M77.97,-53C95.18,-53 118.02,-53 137.17,-53"/>
+<polygon fill="white" stroke="white" points="137.01,-56.5 147.01,-53 137.01,-49.5 137.01,-56.5"/>
+<text text-anchor="middle" x="113.23" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="white">My Link</text>
 </g>
 </g>
 </svg>
