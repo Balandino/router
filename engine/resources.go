@@ -47,7 +47,7 @@ func getDigraph(name string) *digraph {
 	return &ptrDigraph
 }
 
-// getVPC returns a vpc styled resource prefilled with a top left icon
+// getVPC returns a vpc styled container resource prefilled with a top left icon
 func getVPC(name string) *resource {
 	ptrVPC := getSubgraph(name)
 	ptrVPC.addContent(fmt.Sprintf(`labelloc="t" labeljust="l" color="purple" label=<
@@ -62,7 +62,7 @@ func getVPC(name string) *resource {
 	return ptrVPC
 }
 
-// getEC2 returns a ec2 styles resource prefilled with an icon
+// getEC2 returns a ec2 styled resource prefilled with an icon
 func getEC2(instanceID string) *resource {
 	return getPrefilledResource(fmt.Sprintf(`%s [shape=none, fontcolor="white", label=<
        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
@@ -76,6 +76,7 @@ func getEC2(instanceID string) *resource {
         >]`, RemoveDashes(instanceID), instanceID))
 }
 
+// getPrivateSubnet returns a private subnet styled container resource
 func getPrivateSubnet(name string) *resource {
 	ptrSubnet := getSubgraph(name)
 	ptrSubnet.addContent(fmt.Sprintf(`labelloc="t" labeljust="l" color=" #40E0D0" label=<
