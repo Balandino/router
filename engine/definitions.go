@@ -6,6 +6,7 @@ package engine
 type digraph struct {
 	name     string
 	contents []resource
+	links    []link
 }
 
 // resource represents all resources and data to be stored in the resultant .gz file, excluding the digraph.
@@ -16,8 +17,15 @@ type digraph struct {
 // UNUSED for containerType, it's just a resource and shouldn't have any contents, just a value set.  Otherwise
 // it is a container style resource which has contents to be evaluated when building the .gz.
 type resource struct {
-	name          string     // Required for containers, otherwise should be the const UNUSED
+	name          string     // Optional, will only be used for containers
 	containerType string     // Required for containers, otherwise should be the const UNUSED
 	contents      []resource // Contains resources that could be other containers or just resources with values
 	value         string     // The string to be written to the file
+}
+
+// link represents the edges between nodes
+type link struct {
+	from  string
+	to    string
+	label string
 }

@@ -13,8 +13,10 @@ func Route() {
 	ptrPrivSubnet.addResource(ptrEC2)
 
 	ptrVPC.addResource(ptrPrivSubnet)
-	ptrVPC.addLink("i-123", "i-789", "My Link")
 
 	ptrDigraph.addContainer(ptrVPC)
+
+	ptrDigraph.addLink("i-123", "i-789", "My Link")
+
 	writeToFile(*ptrDigraph)
 }

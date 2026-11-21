@@ -22,6 +22,10 @@ func writeToFile(digraph digraph) {
 		output.WriteString(content)
 	}
 
+	for _, link := range digraph.links {
+		fmt.Fprintf(&output, "%s -> %s %s\n", link.from, link.to, link.label)
+	}
+
 	output.WriteString("}")
 	// fmt.Println(output.String())
 
@@ -47,8 +51,8 @@ func processContents(content resource, tabDepth int) string {
 	for _, c := range content.contents {
 		output.WriteString(processContents(c, tabDepth+1))
 	}
-	fmt.Fprintf(&output, "%s}\n", spacingPrefix)
 
+	fmt.Fprintf(&output, "%s}\n", spacingPrefix)
 	return output.String()
 }
 
@@ -106,10 +110,16 @@ func (ptrDigraph *digraph) addNewline() {
 	ptrDigraph.contents = append(ptrDigraph.contents, *prefilledResource)
 }
 
-// addLink adds a link between nodes
-func (ptrContainer *resource) addLink(from, to, label string) {
-	ptrContainer.addContent(fmt.Sprintf(`%s -> %s [label="%s"]`, RemoveDashes(from), RemoveDashes(to), label))
+// addLink adds a link/edge between nodes to the digraph
+func (ptrDigraph *digraph) addLink(from, to, label string) {
+	fmtLabel := fmt.Sprintf(`[label="%s"]`, label)
+	ptrDigraph.links = append(ptrDigraph.links, *getLink(RemoveDashes(from), RemoveDashes(to), fmtLabel))
 }
+
+// // addLink adds a link/edge between nodes
+// func (ptrDigraph *digraph) addLink(from, to, label string) {
+// 	ptrDigraph.addContent(fmt.Sprintf(`%s -> %s [label="%s"]`, RemoveDashes(from), RemoveDashes(to), label))
+// }
 
 // formatBlock cleans up multi-line text (like HTML tables or DOT attributes)
 // by removing common source-code indentation (dedenting) and re-indenting each

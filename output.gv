@@ -43,6 +43,6 @@ digraph gogv {
                 </TABLE>
                  >]
       }
-      i123 -> i789 [label="My Link"]
    }
+i123 -> i789 [label="My Link"]
 }

@@ -1,6 +1,8 @@
 package engine
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // getResource returns the building block type of the program.
 // containerType and name should be UNUSED if just a resource with a value
@@ -17,6 +19,15 @@ func getResource(containerType, name string) *resource {
 func getSubgraph(name string) *resource {
 	// Containers don't seem to render without the prefix cluster_ in the name
 	return getResource("subgraph", fmt.Sprintf("cluster_%s", RemoveDashes(name)))
+}
+
+// getLink returns a link object for storage in the digraph links
+func getLink(from, to, label string) *link {
+	return &link{
+		from:  from,
+		to:    to,
+		label: label,
+	}
 }
 
 // getPrefilledResource builds a resource just containing a value
