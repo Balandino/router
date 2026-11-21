@@ -1,0 +1,49 @@
+digraph gogv {
+	graph [bb="0,0,128.75,128",
+		bgcolor=black,
+		color=white,
+		fontcolor=white,
+		rankdir=LR
+	];
+	node [color=white,
+		fontcolor=white,
+		fontname=Helvetica,
+		fontsize=12,
+		label="\N",
+		shape=box,
+		style=rounded
+	];
+	edge [color=white,
+		fontcolor=white,
+		fontname=Helvetica,
+		fontsize=10
+	];
+	subgraph cluster_c0000 {
+		graph [bb="0,8,128.75,120",
+			color=purple,
+			label=<
+			<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="0">
+				<TR>
+					<TD><IMG SRC="icons/Architecture-Group-Icons_07312026/Virtual-private-cloud-VPC_32.svg"/></TD>
+               <TD><B>cluster_c0000</B></TD>
+            </TR>
+         </TABLE>
+      >,
+			labeljust=l,
+			labelloc=t,
+			lheight=0.42,
+			lp="64.375,101",
+			lwidth=1.57
+		];
+		i789	[height=0.80903,
+			label=<
+       <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+          <TR><TD><IMG SRC="icons/Architecture-Service-Icons_07312026/Arch_Compute/32/Arch_Amazon-EC2_32.svg"/></TD></TR>
+          <TR><TD>i789</TD></TR>
+       </TABLE>
+        >,
+			pos="63.875,45",
+			shape=none,
+			width=0.75];
+	}
+}

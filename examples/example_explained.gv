@@ -1,0 +1,36 @@
+digraph gogv {                                  # Defines a directed graph named 'gogv'
+        rankdir=LR                              # Sets the overall graph flow from Left to Right
+        node [shape=box, style=rounded, fontname=Helvetica, fontsize=12] # Sets default styles for all nodes
+        edge [fontname=Helvetica, fontsize=10, color="#555555"] # Sets default styles for all connecting arrows
+
+        input [label="DOT text", shape=plaintext] # Defines the starting 'input' node with no border box
+
+        subgraph cluster_language {             # Starts a visual cluster box for the parsing/language stage
+                label="dotlang"                 # Titles the cluster box "dotlang"
+                fontname=Helvetica              # Sets the font for the cluster label
+                color="#4a7ebb"                 # Sets the cluster border color to blue
+                lexer -> parser [label="tokens"] # Connects lexer to parser with an edge labeled "tokens"
+        }                                       # Closes the language cluster
+
+        subgraph cluster_layout {             # Starts a visual cluster box for the layout pipeline stage
+                label="layout"                  # Titles the cluster box "layout"
+                fontname=Helvetica              # Sets the font for the cluster label
+                color="#5a9e4b"                 # Sets the cluster border color to green
+                rank -> order -> position -> route # Chains sequential nodes representing layout steps
+        }                                       # Closes the layout cluster
+
+        subgraph cluster_output {             # Starts a visual cluster box for the output stage
+                label="output"                  # Titles the cluster box "output"
+                fontname=Helvetica              # Sets the font for the cluster label
+                color="#b36b2e"                 # Sets the cluster border color to brown/orange
+                node [shape=ellipse]            # Overrides default node shapes to ovals only inside this cluster
+                svg; xdot; json; canon          # Declares the four output format nodes
+        }                                       # Closes the output cluster
+
+        input -> lexer                          # Connects the raw input text node to the lexer
+        parser -> rank [label="graph"]          # Connects parser output to the layout stage, labeled "graph"
+        parser -> canon [label="no layout"]     # Connects parser directly to canon output, bypassing layout
+        route -> svg                            # Connects the final layout step to the svg output node
+        route -> xdot                           # Connects the final layout step to the xdot output node
+        route -> json                           # Connects the final layout step to the json output node
+}                                               # Closes the main digraph block
