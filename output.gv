@@ -13,12 +13,12 @@ digraph gogv {
                   </TR>
                </TABLE>
             >
-      subgraph cluster_sub0c123d321341 {
+      subgraph cluster_sub1 {
          labelloc="t" labeljust="l" color=" #40E0D0" label=<
                   <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="0">
                      <TR>
                         <TD><IMG SRC="icons/Architecture-Group-Icons/Private-subnet_32.svg"/></TD>
-                        <TD><B>sub-0c123d321341</B></TD>
+                        <TD><B>sub-1</B></TD>
                      </TR>
                   </TABLE>
                >
@@ -43,6 +43,18 @@ digraph gogv {
                 </TABLE>
                  >]
       }
+      subgraph cluster_sub2 {
+         labelloc="t" labeljust="l" color=" #40E0D0" label=<
+                  <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="0">
+                     <TR>
+                        <TD><IMG SRC="icons/Architecture-Group-Icons/Private-subnet_32.svg"/></TD>
+                        <TD><B>sub-2</B></TD>
+                     </TR>
+                  </TABLE>
+               >
+         _empty_placeholder [label="", shape=point, width=0, height=0, fixedsize=true, style=invis];
+      }
    }
 i123 -> i789 [label="My Link"]
+sub1 -> sub2 [label="subnet link"]
 }

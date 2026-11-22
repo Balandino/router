@@ -48,7 +48,15 @@ func processContents(content resource, tabDepth int) string {
 	}
 
 	fmt.Fprintf(&output, "%s%s %s {\n", spacingPrefix, content.containerType, content.name)
-	for _, c := range content.contents {
+
+	// If a container has just 1 resource within, then it will likely be the initial setup
+	// text for the container and no nodes.  As such, it won't render.  This places in a blank
+	// node, forcing the container to render
+	if len(content.resources) == 1 {
+		content.addBlankNode()
+	}
+
+	for _, c := range content.resources {
 		output.WriteString(processContents(c, tabDepth+1))
 	}
 
@@ -63,7 +71,7 @@ func RemoveDashes(s string) string {
 
 // addResource adds another resource to the contents of another
 func (ptrContainer *resource) addResource(ptrResource *resource) {
-	ptrContainer.contents = append(ptrContainer.contents, *ptrResource)
+	ptrContainer.resources = append(ptrContainer.resources, *ptrResource)
 }
 
 // addResource adds a new resource to the digraph
@@ -74,7 +82,7 @@ func (ptrDigraph *digraph) addResource(ptrResource *resource) {
 // addContent adds a new resource existing content of a resource
 func (ptrContainer *resource) addContent(value string) {
 	prefilledResource := getPrefilledResource(value)
-	ptrContainer.contents = append(ptrContainer.contents, *prefilledResource)
+	ptrContainer.resources = append(ptrContainer.resources, *prefilledResource)
 }
 
 // addContent adds a new resource to the existing content of the digraph
@@ -95,7 +103,7 @@ func (ptrDigraph *digraph) multiAddContent(values []string) {
 func (ptrContainer *resource) multiAddContent(values []string) {
 	for _, value := range values {
 		prefilledResource := getPrefilledResource(value)
-		ptrContainer.contents = append(ptrContainer.contents, *prefilledResource)
+		ptrContainer.resources = append(ptrContainer.resources, *prefilledResource)
 	}
 }
 
@@ -114,6 +122,13 @@ func (ptrDigraph *digraph) addNewline() {
 func (ptrDigraph *digraph) addLink(from, to, label string) {
 	fmtLabel := fmt.Sprintf(`[label="%s"]`, label)
 	ptrDigraph.links = append(ptrDigraph.links, *getLink(RemoveDashes(from), RemoveDashes(to), fmtLabel))
+}
+
+// addBlankNode adds an empty invisible node to a container. This can force it to render in the final image as a blank
+// container, such as a subgraph, won't show if there are no contained nodes
+func (ptrContainer *resource) addBlankNode() {
+	blankResource := getPrefilledResource(`_empty_placeholder [label="", shape=point, width=0, height=0, fixedsize=true, style=invis];`)
+	ptrContainer.resources = append(ptrContainer.resources, *blankResource)
 }
 
 // // addLink adds a link/edge between nodes

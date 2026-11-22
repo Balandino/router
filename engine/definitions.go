@@ -19,7 +19,7 @@ type digraph struct {
 type resource struct {
 	name          string     // Optional, will only be used for containers
 	containerType string     // Required for containers, otherwise should be the const UNUSED
-	contents      []resource // Contains resources that could be other containers or just resources with values
+	resources     []resource // Contains resources that could be other containers or just resources with values
 	value         string     // The string to be written to the file
 }
 

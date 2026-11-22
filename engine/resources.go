@@ -10,7 +10,7 @@ func getResource(containerType, name string) *resource {
 	return &resource{
 		name:          name,
 		containerType: containerType,
-		contents:      []resource{},
+		resources:     []resource{},
 		value:         "",
 	}
 }
@@ -35,7 +35,7 @@ func getPrefilledResource(value string) *resource {
 	return &resource{
 		name:          UNUSED,
 		containerType: UNUSED,
-		contents:      []resource{},
+		resources:     []resource{},
 		value:         value,
 	}
 }

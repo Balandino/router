@@ -5,21 +5,27 @@
  -->
 <!-- Title: gogv Pages: 1 -->
 <svg width="100%" height="100%"
- viewBox="0.00 0.00 234.45 190.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 186)">
+ viewBox="0.00 0.00 270.65 288.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 284)">
 <title>gogv</title>
-<polygon fill="black" stroke="none" points="-4,4 -4,-186 230.45,-186 230.45,4 -4,4"/>
+<polygon fill="black" stroke="none" points="-4,4 -4,-284 266.65,-284 266.65,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_c0000</title>
-<polygon fill="black" stroke="purple" points="8,-8 8,-174 218.45,-174 218.45,-8 8,-8"/>
-<image xlink:href="icons/Architecture-Group-Icons/Virtual-private-cloud-VPC_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="20" y="-166"/>
-<text text-anchor="start" x="46" y="-151.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">c0000</text>
+<polygon fill="black" stroke="purple" points="2.16,-8 2.16,-236 254.65,-236 254.65,-8 2.16,-8"/>
+<image xlink:href="icons/Architecture-Group-Icons/Virtual-private-cloud-VPC_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="14.1587" y="-228"/>
+<text text-anchor="start" x="40.16" y="-213.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">c0000</text>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_sub0c123d321341</title>
-<polygon fill="black" stroke="#40e0d0" points="16,-16 16,-128 210.45,-128 210.45,-16 16,-16"/>
+<title>cluster_sub1</title>
+<polygon fill="black" stroke="#40e0d0" points="16,-16 16,-128 246.65,-128 246.65,-16 16,-16"/>
 <image xlink:href="icons/Architecture-Group-Icons/Private-subnet_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="28" y="-120"/>
-<text text-anchor="start" x="54" y="-105.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">sub&#45;0c123d321341</text>
+<text text-anchor="start" x="54" y="-105.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">sub&#45;1</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_sub2</title>
+<polygon fill="black" stroke="#40e0d0" points="10.16,-136 10.16,-190 92.84,-190 92.84,-136 10.16,-136"/>
+<image xlink:href="icons/Architecture-Group-Icons/Private-subnet_32.svg" width="22px" height="22px" preserveAspectRatio="xMinYMin meet" x="22.1587" y="-182"/>
+<text text-anchor="start" x="48.16" y="-167.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="white">sub&#45;2</text>
 </g>
 <!-- i123 -->
 <g id="node1" class="node">
@@ -30,15 +36,35 @@
 <!-- i789 -->
 <g id="node2" class="node">
 <title>i789</title>
-<image xlink:href="icons/Architecture-Service-Icons/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="162.111" y="-74.2"/>
-<text text-anchor="start" x="162.11" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;789</text>
+<image xlink:href="icons/Architecture-Service-Icons/Arch_Compute/32/Arch_Amazon-EC2_32.svg" width="26.6836px" height="22px" preserveAspectRatio="xMinYMin meet" x="198.307" y="-74.2"/>
+<text text-anchor="start" x="198.31" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">i&#45;789</text>
 </g>
 <!-- i123&#45;&gt;i789 -->
 <g id="edge1" class="edge">
 <title>i123&#45;&gt;i789</title>
-<path fill="none" stroke="white" d="M77.97,-53C95.18,-53 118.02,-53 137.17,-53"/>
-<polygon fill="white" stroke="white" points="137.01,-56.5 147.01,-53 137.01,-49.5 137.01,-56.5"/>
-<text text-anchor="middle" x="113.23" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="white">My Link</text>
+<path fill="none" stroke="white" d="M77.84,-53C103.77,-53 143.97,-53 173.35,-53"/>
+<polygon fill="white" stroke="white" points="173.3,-56.5 183.3,-53 173.3,-49.5 173.3,-56.5"/>
+<text text-anchor="middle" x="142.75" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="white">My Link</text>
+</g>
+<!-- _empty_placeholder -->
+<!-- sub1 -->
+<g id="node4" class="node">
+<title>sub1</title>
+<path fill="none" stroke="white" d="M66,-280C66,-280 36,-280 36,-280 30,-280 24,-274 24,-268 24,-268 24,-256 24,-256 24,-250 30,-244 36,-244 36,-244 66,-244 66,-244 72,-244 78,-250 78,-256 78,-256 78,-268 78,-268 78,-274 72,-280 66,-280"/>
+<text text-anchor="middle" x="51" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sub1</text>
+</g>
+<!-- sub2 -->
+<g id="node5" class="node">
+<title>sub2</title>
+<path fill="none" stroke="white" d="M226.65,-280C226.65,-280 196.65,-280 196.65,-280 190.65,-280 184.65,-274 184.65,-268 184.65,-268 184.65,-256 184.65,-256 184.65,-250 190.65,-244 196.65,-244 196.65,-244 226.65,-244 226.65,-244 232.65,-244 238.65,-250 238.65,-256 238.65,-256 238.65,-268 238.65,-268 238.65,-274 232.65,-280 226.65,-280"/>
+<text text-anchor="middle" x="211.65" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sub2</text>
+</g>
+<!-- sub1&#45;&gt;sub2 -->
+<g id="edge2" class="edge">
+<title>sub1&#45;&gt;sub2</title>
+<path fill="none" stroke="white" d="M78.2,-262C104.03,-262 143.78,-262 173,-262"/>
+<polygon fill="white" stroke="white" points="172.9,-265.5 182.9,-262 172.9,-258.5 172.9,-265.5"/>
+<text text-anchor="middle" x="142.75" y="-265" font-family="Helvetica,sans-Serif" font-size="10.00" fill="white">subnet link</text>
 </g>
 </g>
 </svg>
